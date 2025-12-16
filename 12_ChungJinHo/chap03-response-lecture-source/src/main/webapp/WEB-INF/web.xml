@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+    <!-- 클라이언트 에러 (4xx) -->
+
+    <!-- 400 Bad Request -->
+    <error-page>
+        <error-code>400</error-code>
+        <location>/showErrorPage</location>
+    </error-page>
+
+    <!-- 401 Unauthorized -->
+    <error-page>
+        <error-code>401</error-code>
+        <location>/showErrorPage</location>
+    </error-page>
+
+    <!-- 403 Forbidden -->
+    <error-page>
+        <error-code>403</error-code>
+        <location>/showErrorPage</location>
+    </error-page>
+
+    <!-- 404 Not Found -->
+    <error-page>
+        <error-code>404</error-code>
+        <location>/showErrorPage</location>
+    </error-page>
+
+    <!-- 405 Method Not Allowed -->
+    <error-page>
+        <error-code>405</error-code>
+        <location>/showErrorPage</location>
+    </error-page>
+
+    <!-- 408 Request Timeout -->
+    <error-page>
+        <error-code>408</error-code>
+        <location>/showErrorPage</location>
+    </error-page>
+
+    <!-- 415 Unsupported Media Type -->
+    <error-page>
+        <error-code>415</error-code>
+        <location>/showErrorPage</location>
+    </error-page>
+
+    <!-- 서버 에러 (5xx) -->
+
+    <!-- 500 Internal Server Error -->
+    <error-page>
+        <error-code>500</error-code>
+        <location>/showErrorPage</location>
+    </error-page>
+
+    <!-- 502 Bad Gateway -->
+    <error-page>
+        <error-code>502</error-code>
+        <location>/showErrorPage</location>
+    </error-page>
+
+    <!-- 503 Service Unavailable -->
+    <error-page>
+        <error-code>503</error-code>
+        <location>/showErrorPage</location>
+    </error-page>
+
+    <!-- 504 Gateway Timeout -->
+    <error-page>
+        <error-code>504</error-code>
+        <location>/showErrorPage</location>
+    </error-page>
+
+    <!-- 예외 타입별 에러 페이지 -->
+
+    <!-- Java 예외 처리 -->
+    <error-page>
+        <exception-type>java.lang.Exception</exception-type>
+        <location>/showErrorPage</location>
+    </error-page>
+
+    <!-- NullPointerException -->
+    <error-page>
+        <exception-type>java.lang.NullPointerException</exception-type>
+        <location>/showErrorPage</location>
+    </error-page>
+
+    <!-- ServletException -->
+    <error-page>
+        <exception-type>jakarta.servlet.ServletException</exception-type>
+        <location>/showErrorPage</location>
+    </error-page>
+
+</web-app>
