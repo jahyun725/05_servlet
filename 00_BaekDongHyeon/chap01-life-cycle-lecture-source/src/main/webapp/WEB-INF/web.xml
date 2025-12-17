@@ -3,4 +3,22 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+
+    <!-- MarkUp 언어 주석 -->
+
+    <!-- 1. LifeCycleTest 클래스를 Servlet으로 등록 -->
+    <servlet>
+        <servlet-name>xmlmapping</servlet-name>
+        <servlet-class>com.ohgiraffers.chap01lifecyclelecturesource.section01.xml.LifeCycleTest</servlet-class>
+        <load-on-startup>2</load-on-startup>
+    </servlet>
+    
+    <!-- 2. 등록된 서블릿이 어떤 요청(url)에 동작할지 매핑 -->
+    <servlet-mapping>
+        <servlet-name>xmlmapping</servlet-name>
+        <url-pattern>/xml-lifecycle</url-pattern>
+    </servlet-mapping>
+    
+
+
 </web-app>

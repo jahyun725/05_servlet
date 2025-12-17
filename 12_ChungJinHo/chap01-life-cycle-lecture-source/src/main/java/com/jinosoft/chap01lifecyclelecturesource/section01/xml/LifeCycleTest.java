@@ -1,0 +1,46 @@
+package com.jinosoft.chap01lifecyclelecturesource.section01.xml;
+
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServlet;
+import java.io.IOException;
+
+
+/* Servlet Class : 자바를 이용해서 요청, 응답 처리를 할 수 있게 만든 클래스
+ * * Servlet Class를 만드는 방법
+ *  - HttpServlet Class를 상속 받아서 필요한 메서드를 오버라이딩
+ *
+ * * Servlet의 생명주기(LC)
+ * - init() : Servlet 최초 호출 또는 서버 배포 시
+ *            해당 클래스를 인스턴스화하면서 실행
+ * - service() : 클라이언트 요청에 대한 서비스를 제공하는 메서드
+ * - destroy() : 서버 재시작 또는 종료시점에 서블릿 인스턴스 소멸하면서
+ *               실행되는 메서드
+ * * Servlet 등록
+ *  - HttpServlet을 상속받은 클래스를 등록해서
+ *    Servlet Container가 관리하고, 요청/응당 처리를 할 수 있게 만드는 과정
+ *  - XML 방식, @annotaion 방식 두가지가 있음
+ *  */
+public class LifeCycleTest extends HttpServlet {
+
+  @Override
+  public void init() throws ServletException {
+    System.out.println("***** XML 매핑 init() method called *****");
+  }
+
+  @Override
+  public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
+    System.out.println(" @@@@@ XML 매핑 service() method called @@@@@");
+  }
+
+  @Override
+  public void destroy() {
+    System.out.println("xxxxx XML 매핑 destroy() method called xxxxx");
+  }
+
+  public LifeCycleTest(){
+    System.out.println("LifeCycleTest");
+
+  }
+}
